@@ -1,2 +1,2 @@
-# plotygraphs
+# plotygraphics
 Create graphics with python 

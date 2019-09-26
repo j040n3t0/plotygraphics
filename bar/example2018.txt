@@ -1,0 +1,3 @@
+Worms;8
+Vírus;10
+Trojans;13

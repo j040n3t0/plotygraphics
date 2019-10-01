@@ -3,16 +3,39 @@
 <head>
 	<title>.:: Python Plotly ::.</title>
 	<script>
-		window.setInterval("reloadIFrame();", 5000);
-		function reloadIFrame() {
-			document.getElementById("iframe").contentDocument.location.reload(true);
-		}
-</script> 
+	window.setInterval(
+		function myFunction() {
+			var x = document.getElementById("iframe1");
+			if (x.style.display === "none") {
+				x.style.display = "block";
+			} else {
+				x.style.display = "none";
+			}
+
+			var y = document.getElementById("iframe2");
+			if (y.style.display === "block") {
+				y.style.display = "none";
+			} else {
+				y.style.display = "block";
+			}
+		}, 5000
+	);
+	</script>
 </head>
 <body>
 <center>
 	<h1>Grafico Legal Aqui</h1>
-	<iframe id="iframe" src="graph.html" height="300" width="600" frameBorder="1"></iframe>
+	<!-- <button onclick="myFunction()">Try it</button> -->
+	<div id="frame1" >
+		<iframe style="display: block;" id="iframe1" src="graph3.html" height="500" width="900" frameBorder="1"></iframe>
+		<iframe style="display: block;" id="iframe2" src="graph.html" height="500" width="900" frameBorder="1"></iframe>
+	</div>
 </center>
+<script type="text/javascript">
+	(function() {
+		document.getElementById("iframe2").style.display="none";
+	})();
+	
+</script>
 </body>
 </html>

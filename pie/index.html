@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="UTF-8">
 	<title>.:: Python Plotly ::.</title>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
 	<script>
 	window.setInterval(
 		function myFunction() {
@@ -17,6 +19,7 @@
 				y.style.display = "none";
 			} else {
 				y.style.display = "block";
+				//y.src = "graph.html";
 			}
 		}, 5000
 	);
@@ -24,18 +27,41 @@
 </head>
 <body>
 <center>
-	<h1>Grafico Legal Aqui</h1>
-	<!-- <button onclick="myFunction()">Try it</button> -->
+	<h1>Gráfico Legalzão Aqui</h1>
+	<h3>Python + Plotly + Gambiarra</h3>
+	<!-- <button id="reload" onclick="refreshIframe()">Try it</button><p> -->
 	<div id="frame1" >
-		<iframe style="display: block;" id="iframe1" src="graph3.html" height="500" width="900" frameBorder="1"></iframe>
-		<iframe style="display: block;" id="iframe2" src="graph.html" height="500" width="900" frameBorder="1"></iframe>
+		<table border="0" align="center">
+			<tr>
+				<td valign="bottom">
+					<img height="150px" width="150px" src="apenas-um-show-png-1.png">
+				</td>
+				<td>
+					<iframe style="display: block;" id="iframe1" src="graph3.html" height="500" width="500" frameBorder="0"></iframe>
+					<iframe style="display: none;" id="iframe2" src="graph.html" height="500" width="500" frameBorder="0"></iframe>
+				</td>
+				<td valign="bottom">
+					<img height="250px" width="200px" src="apenas-um-show-png-2.png">
+				</td>
+		</table>	
 	</div>
 </center>
 <script type="text/javascript">
+	function refreshIframe() {
+    	$("#iframe2")[0].src = $("#iframe2")[0].src;
+    }
+	/*$(document).ready(function() {
+		$('#reload').click(function() {
+			$('#iframe2').attr('src', $('#iframe2').attr('src'));
+			return false;
+		});
+	});*/
+</script>
+<!-- <script type="text/javascript">
 	(function() {
 		document.getElementById("iframe2").style.display="none";
 	})();
-	
+-->
 </script>
 </body>
 </html>

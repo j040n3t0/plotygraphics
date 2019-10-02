@@ -5,19 +5,21 @@ import plotly.graph_objs as go
 import os, time
 
 print "[*] Iniciando script..."
-time.sleep(2)
+#time.sleep(2)
 print "[*] Gerando gráficos..."
-time.sleep(1)
+#time.sleep(1)
 print "[!] Gráficos gerados com sucesso!! \o/"
-time.sleep(1)
+#time.sleep(1)
 print "[*] Abrindo a visualização..."
-time.sleep(1)
+#time.sleep(1)
 
 def createGraph(a,b,c,d,filename): 
-	labels = ['Oxygen','Hydrogen','Carbon_Dioxide','Nitrogen']
+	labels = ['Virus','Worms','Trojans','Rootkit']
 	values = [a,b,c,d]
 
-	data = go.Pie(labels=labels, values=values)
+	data = go.Pie(labels=labels, values=values, \
+		hole=.3, showlegend=False, textposition="auto")
+	#data = go.Pie(values=values)
 
 	py.plot({"data": data, \
 	        "layout": go.Layout(title="Relatório de Malwares | Created by: João Neto"), \
